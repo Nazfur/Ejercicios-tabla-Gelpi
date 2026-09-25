@@ -1,0 +1,39 @@
+# Ejercicio 2.19
+
+## Enunciado del ejercicio:
+---
+blab bla
+
+# Corrección de Nombres de Variables - Buenas Prácticas
+
+El problema del código original no es funcional, sino de legibilidad y mantenibilidad.
+
+## Código Corregido
+
+```python
+import math
+
+PI = 3.14159
+CODIGO_COLOR_ROJO = 1
+CODIGO_COLOR_VERDE = 2
+CODIGO_COLOR_AZUL = 3
+
+lista_calificaciones = [10, 20, 30, 40, 50]
+
+def calcular_estadisticas(datos):
+    promedio = sum(datos) / len(datos)
+    valor_maximo = max(datos)
+    valor_minimo = min(datos)
+    return promedio, valor_maximo, valor_minimo
+
+def mostrar_resultados_estadisticos():
+    debe_mostrar_resultados = True
+    if debe_mostrar_resultados:
+        estadisticas = calcular_estadisticas(lista_calificaciones)
+        print("Resultados:", estadisticas)
+
+for indice, valor in enumerate(lista_calificaciones):
+    print(f"Elemento {indice}: {valor}")
+
+mostrar_resultados_estadisticos()
+```
