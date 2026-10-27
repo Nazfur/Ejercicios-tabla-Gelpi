@@ -4,12 +4,10 @@ def cambio_monetario(centimos):
     monedasTipos = [20, 10, 5, 2, 1]
     cantidadMonedas = [0] * len(monedasTipos)
 
-    indice = 0
 
-    for moneda in monedasTipos:
+    for moneda, indice in enumerate(monedasTipos):
         
         cantidadMonedas[indice] = cantidad // moneda
         cantidad = cantidad - cantidadMonedas[indice] * moneda
-        indice += 1
     
-    return cantidadMonedas
+    return tuple(cantidadMonedas)
